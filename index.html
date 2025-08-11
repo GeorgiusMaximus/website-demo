@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>0815 Platzhalter Website</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb; --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; color:#0f172a;background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+
+    /* Header */
+    header{background:transparent;padding:18px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+    .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:2.1rem;margin:0 0 12px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .screenshot{width:100%;height:260px;background:linear-gradient(180deg,#eef2ff,#eef9ff);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-weight:600}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+    .feature h3{margin:10px 0 6px}
+    .feature p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    /* Content */
+    main{padding:24px 0}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:24px}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr 1fr}
+      nav ul{display:none}
+      .mobile-toggle{display:inline-flex}
+    }
+    .mobile-toggle{display:none;align-items:center;gap:10px;padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)}
+    .muted{color:var(--muted)}
+
+    /* Small helpers */
+    .btn-outline{padding:8px 12px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);font-weight:600}
+    .small{font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">01</div>
+        <div>
+          <div style="font-weight:700">Meine Firma</div>
+          <div class="small muted">Platzhalter &amp; Demo</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">Über</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="btn-outline">Login</button>
+        <a class="cta" href="#">Call to Action</a>
+        <button class="mobile-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="container hero">
+    <div>
+      <h1>Ein einfacher Platzhalter für deine Website</h1>
+      <p>Sauberes, responsives Template zum schnellen Einsatz — ideal als temporäre Landingpage oder Demo. Passe Titel, Texte und Bilder an.</p>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="cta" href="#kontakt">Los geht's</a>
+        <a class="btn-outline" href="#">Mehr erfahren</a>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <div class="small muted">Kurze Infos</div>
+        <div style="display:flex;gap:14px;margin-top:12px">
+          <div style="flex:1">
+            <strong>Uptime</strong>
+            <div class="muted small">99.9% (Beispiel)</div>
+          </div>
+          <div style="flex:1">
+            <strong>Support</strong>
+            <div class="muted small">support@beispiel.de</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="card">
+        <div class="screenshot">Screenshot / Bild (Platzhalter)</div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <div style="flex:1">
+            <div class="small muted">Status</div>
+            <div style="font-weight:700">BEREIT</div>
+          </div>
+          <div style="align-self:center"><button class="btn-outline">Demo</button></div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <main class="container">
+    <section id="features">
+      <h2 style="margin:0 0 12px">Features</h2>
+      <div class="features">
+        <div class="card feature">
+          <div style="font-size:1.3rem">Schnell</div>
+          <h3>Leicht &amp; schnell</h3>
+          <p>Minimaler Code, damit die Seite schnell lädt. Passe Texte und Farben an.</p>
+        </div>
+        <div class="card feature">
+          <div style="font-size:1.3rem">Responsiv</div>
+          <h3>Für alle Bildschirmgrößen</h3>
+          <p>Mobile-first Layout — die Seite sieht auch auf Handys gut aus.</p>
+        </div>
+        <div class="card feature">
+          <div style="font-size:1.3rem">Einfach</div>
+          <h3>Kein Backend nötig</h3>
+          <p>Nur HTML/CSS/kleines JS — direkt per Drag &amp; Drop auf den Server.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:28px" class="two-col">
+      <article class="card">
+        <h3 id="about">Über diese Seite</h3>
+        <p class="muted">Dies ist ein generischer Platzhalter ("0815") — ideal als temporäre Startseite. Du kannst diesen Bereich mit eigenen Bildern, Texten oder einem echten Produkt ersetzen.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+      </article>
+
+      <aside class="card" id="kontakt">
+        <h4>Kontakt</h4>
+        <form onsubmit="event.preventDefault();alert('Formular gesendet (Platzhalter)')">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input type="text" placeholder="Name" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+            <input type="email" placeholder="E-Mail" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ef">
+            <textarea placeholder="Nachricht" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ef"></textarea>
+            <button class="cta" type="submit">Absenden</button>
+          </div>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>Meine Firma</strong>
+          <div class="small muted">© "Jahr" — Platzhalter</div>
+        </div>
+        <div class="muted small">Impressum · Datenschutz · AGB</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Kleines Mobile-Menu (Platzhalter)
+    const toggle = document.querySelector('.mobile-toggle');
+    toggle && toggle.addEventListener('click', ()=>{
+      const ul = document.querySelector('nav ul');
+      if(!ul) return;
+      if(ul.style.display === 'flex') ul.style.display = 'none';
+      else ul.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
